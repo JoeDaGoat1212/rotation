@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Rotation</title>
+    <meta name="description" content="Your closet, outfits and what you're wearing this week." />
+    <meta name="theme-color" content="#151C36" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Rotation" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <body>
+    <div id="boot" class="boot" aria-live="polite">
+      <span class="patch">Rotation</span>
+    </div>
+
+    <div id="boot-error" class="boot boot--error" hidden>
+      <span class="patch">Rotation</span>
+      <h1>Rotation can’t open here</h1>
+      <p data-detail></p>
+    </div>
+
+    <div id="app" class="app" hidden>
+      <header class="topbar">
+        <a class="patch" href="#/today" aria-label="Rotation, go to Today">Rotation</a>
+        <a id="top-settings" class="icon-btn" href="#/settings" aria-label="Settings"></a>
+      </header>
+
+      <aside class="rail">
+        <a class="patch" href="#/today" aria-label="Rotation, go to Today">Rotation</a>
+        <nav id="rail-nav" class="rail-nav" aria-label="Main"></nav>
+        <div id="rail-foot" class="rail-foot"></div>
+      </aside>
+
+      <main id="view" class="main"></main>
+
+      <nav id="tabbar" class="tabbar" aria-label="Main"></nav>
+    </div>
+
+    <div id="drop" class="drop" hidden>
+      <p>Drop photos to add them to your closet</p>
+    </div>
+
+    <noscript>
+      <div class="boot boot--error">
+        <span class="patch">Rotation</span>
+        <h1>Turn on JavaScript to use Rotation</h1>
+      </div>
+    </noscript>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
